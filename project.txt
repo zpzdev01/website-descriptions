@@ -1,0 +1,151 @@
+HOSTS 1: http://192.168.222.95
+HOSTS 2: http://192.168.0.78:801
+SERVICE: zpzserver/zpzchina.svc/
+
+===============================================================================
+获取所有项目列表，带分页
+-------------------------------------------------------------------------------
+URL: Projects/{token}?startIndex={startIndex}&pageSize={pageSize}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+模糊搜索项目列表，带分页
+-------------------------------------------------------------------------------
+URL: Projects/{token}?keywords={keywords}&startIndex={startIndex}&pageSize={pageSize}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+高级搜索项目列表，带分页
+-------------------------------------------------------------------------------
+URL: Projects/{token}?keywords={keywords}&
+		company={company}&
+		projectStage={projectStage}&
+		district={district}&
+		province={province}&
+		category={category}&
+		startIndex={startIndex}&
+		pageSize={pageSize}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+获取项目详情
+-------------------------------------------------------------------------------
+URL: Projects/{token}?projectID={projectID}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+新建项目
+-------------------------------------------------------------------------------
+URL: Projects/{token}
+Method: POST
+Content-Type: application/json
+Body:
+{
+	"data":
+	{
+		"acl": "{acl}",
+		"actualStartTime": "{actualStartTime}",
+		"area": "{area}",
+		"areaOfStructure": "{areaOfStructure}",
+		"city": "{city}",
+		"decorationProgress": "{decorationProgress}",
+		"decorationSituation": "{decorationSituation}",
+		"description": "{description}",
+		"district": "{district}",
+		"electroweakInstallation": "{electroweakInstallation}",
+		"expectedConstructionTime": "{expectedConstructionTime}",
+		"expectedFinishTime": "{expectedFinishTime}",
+		"expectedStartTime": "{expectedStartTime}",
+		"fireControl": "{fireControl}",
+		"foreignInvestment": "{foreignInvestment}",
+		"green": "{green}",
+		"investment": "{investment}",
+		"landAddress": "{landAddress}",
+		"landName": "{landName}",
+		"latitude": "{latitude}",
+		"longitude": "{longitude}",
+		"mainDesignStage": "{mainDesignStage}",
+		"ownerType": "{ownerType}",
+		"plotRatio": "{plotRatio}",
+		"projectCode": "{projectCode}",
+		"projectID": "{projectID}",
+		"projectName": "{projectName}",
+		"projectStage": "{projectStage}",
+		"propertyAirCondition": "{propertyAirCondition}",
+		"propertyElevator": "{propertyElevator}",
+		"propertyExternalWallMeterial": "{propertyExternalWallMeterial}",
+		"propertyHeating": "{propertyHeating}",
+		"propertyStealStructure": "{propertyStealStructure}",
+		"province": "{province}",
+		"storeyHeight": "{storeyHeight}",
+		"usage": "{usage}"
+	},
+	"token":"{token}"
+}
+
+===============================================================================
+修改项目
+-------------------------------------------------------------------------------
+URL: Projects/{token}
+Method: PUT
+Content-Type: application/json
+Body:
+{
+	"data":
+	{
+		"acl": "{acl}",
+		"actualStartTime": "{actualStartTime}",
+		"area": "{area}",
+		"areaOfStructure": "{areaOfStructure}",
+		"city": "{city}",
+		"decorationProgress": "{decorationProgress}",
+		"decorationSituation": "{decorationSituation}",
+		"description": "{description}",
+		"district": "{district}",
+		"electroweakInstallation": "{electroweakInstallation}",
+		"expectedConstructionTime": "{expectedConstructionTime}",
+		"expectedFinishTime": "{expectedFinishTime}",
+		"expectedStartTime": "{expectedStartTime}",
+		"fireControl": "{fireControl}",
+		"foreignInvestment": "{foreignInvestment}",
+		"green": "{green}",
+		"investment": "{investment}",
+		"landAddress": "{landAddress}",
+		"landName": "{landName}",
+		"latitude": "{latitude}",
+		"longitude": "{longitude}",
+		"mainDesignStage": "{mainDesignStage}",
+		"ownerType": "{ownerType}",
+		"plotRatio": "{plotRatio}",
+		"projectCode": "{projectCode}",
+		"projectID": "{projectID}",
+		"projectName": "{projectName}",
+		"projectStage": "{projectStage}",
+		"propertyAirCondition": "{propertyAirCondition}",
+		"propertyElevator": "{propertyElevator}",
+		"propertyExternalWallMeterial": "{propertyExternalWallMeterial}",
+		"propertyHeating": "{propertyHeating}",
+		"propertyStealStructure": "{propertyStealStructure}",
+		"province": "{province}",
+		"storeyHeight": "{storeyHeight}",
+		"usage": "{usage}"
+	},
+	"token": "{token}"
+}
+
+
+
+
+

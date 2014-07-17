@@ -1,0 +1,74 @@
+HOSTS 1: http://192.168.222.95
+HOSTS 2: http://192.168.0.78:801
+SERVICE: zpzserver/zpzchina.svc/
+
+===============================================================================
+按projectID及category获取图片，图片为缩略图
+-------------------------------------------------------------------------------
+URL: ProjectImgs/{token}?projectID={projectID}&category={category}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+按projectID获取图片，图片为缩略图
+-------------------------------------------------------------------------------
+URL: ProjectImgs/{token}?projectID={projectID}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+按imgID获取原始图片
+-------------------------------------------------------------------------------
+URL: ProjectImgs/{token}?imgID={imgID}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+上传图片
+-------------------------------------------------------------------------------
+URL: ProjectImgs/
+Method: GET
+Content-Type: application/json
+Body:
+{
+	"data":{
+		"imgName":"{imgName}",
+		"imgContent":"{imgContent}",
+		"category":"{category}",
+		"projectID":"{projectID}",
+		"project":"{projectName}",
+		"device":"{device}"
+	},
+	"token":"{token}"
+} 
+
+device: ["ios", ""]
+
+===============================================================================
+更新图片
+-------------------------------------------------------------------------------
+URL: ProjectImgs/
+Method: GET
+Content-Type: application/json
+Body:
+{
+	"data":{
+		"projectImgID":"{projectImgID}",
+		"imgName":"{imgName}",
+		"imgContent":"{imgContent}",
+		"category":"{category}",
+		"projectID":"{projectID}",
+		"project":"{projectName}",
+		"device":"{device}"
+	},
+	"token":"{token}"
+} 
+
+device: ["ios", ""]
+

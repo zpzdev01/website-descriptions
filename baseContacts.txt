@@ -1,0 +1,114 @@
+HOSTS 1: http://192.168.222.95
+HOSTS 2: http://192.168.0.78:801
+SERVICE: zpzserver/zpzchina.svc/
+
+===============================================================================
+按projectID获取所有联系人
+-------------------------------------------------------------------------------
+URL: BaseContacts/{token}?projectID={projectID}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+按projectID及category获取所有联系人，最多3人
+-------------------------------------------------------------------------------
+URL: BaseContacts/{token}?projectID={projectID}&category={category}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+按baseContactID获取单一联系人
+-------------------------------------------------------------------------------
+URL: BaseContacts/{token}?baseContactID={baseContactID}
+Method: GET
+Content-Type: application/json
+Body:
+空
+
+===============================================================================
+新增联系人信息
+-------------------------------------------------------------------------------
+URL: BaseContacts/
+Method: POST
+Content-Type: application/json
+Body:
+{
+	"data":
+	{
+		"name":"{name}",
+		"telephone":"{telephone}",
+		"project":"{project}",
+		"category":"{category}",
+		"duties":"{duties}",
+		"workAt":"{workAt}",
+		"workAddress":"{workAddress}",
+		"projectID":"{projectID}"
+	},
+	"token":"{token}"
+}
+
+===============================================================================
+修改联系人信息
+-------------------------------------------------------------------------------
+URL: BaseContacts/
+Method: PUT
+Content-Type: application/json
+Body:
+{
+	"data":
+	{
+		"baseContactID":"{baseContactID}",
+		"name":"{name}",
+		"telephone":"{telephone}",
+		"project":"{project}",
+		"category":"{category}",
+		"duties":"{duties}",
+		"workAt":"{workAt}",
+		"workAddress":"{workAddress}",
+		"projectID":"{projectID}"
+	},
+	"token":"{token}"
+}
+
+===============================================================================
+删除联系人信息
+-------------------------------------------------------------------------------
+URL: BaseContacts/
+Method: DELETE
+Content-Type: application/json
+Body:
+{
+	"baseContactID":"{baseContactID}",
+	"token":"{token}"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
